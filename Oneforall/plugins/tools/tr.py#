@@ -5,7 +5,7 @@ from Oneforall import app
 
 # .......
 
-trans = Translator()
+#trans = Translator()
 
 # ......
 
