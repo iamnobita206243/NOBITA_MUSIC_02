@@ -153,7 +153,6 @@ HELP_15 = """
 """
 
 HELP_16 = #"""
-🛠️ ʜᴇʟᴘ sᴇᴄᴛɪᴏɴ:
 
 ⬤ /start - 🤖 To start the bot  
 ⬤ /guess - 🕵️ To guess a character (works only in groups)  
