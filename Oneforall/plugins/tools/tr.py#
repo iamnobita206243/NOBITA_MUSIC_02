@@ -1,4 +1,4 @@
-from gpytranslate import Translator
+#from gpytranslate import Translator
 from pyrogram import filters
 
 from Oneforall import app
