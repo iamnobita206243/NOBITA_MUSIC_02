@@ -56,7 +56,7 @@ async def broadcast(client: Client, message: Message):
     is_pro_user = await is_pro(user.id)
     if not is_pro_user:
         return await message.reply_text(
-            f"{user.mention}, you don't have to access connect [GOKU](https://t.me/xeno_kakarot) and buy it."
+            f"{user.mention}, you don't have to access connect [𝚴 𝐎 𝐁 𝚰 𝐓 𝚲](https://t.me/ll_NOBITA_DEFAULTERS_ll) and buy it."
         )
     if IS_BROADCASTING:
         return await message.reply_text(
