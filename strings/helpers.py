@@ -152,7 +152,7 @@ HELP_15 = """
 ⬤ /cspeed or ⬤ /cplayback ➥ ғᴏʀ ᴀᴅᴊᴜsᴛɪɴɢ ᴛʜᴇ ᴀᴜᴅɪᴏ ᴘʟᴀʏʙᴀᴄᴋ sᴘᴇᴇᴅ ɪɴ ᴄʜᴀɴɴᴇʟ.
 """
 
-HELP_16 = """
+HELP_16 = #"""
 🛠️ ʜᴇʟᴘ sᴇᴄᴛɪᴏɴ:
 
 ⬤ /start - 🤖 To start the bot  
@@ -175,7 +175,7 @@ HELP_16 = """
 ⬤ /myplant - 🌱 To create your plant  
 ⬤ /claim - 🪙 To claim plant coins
 ⬤ /request - 😍 add your favorite character
-    """
+    #"""
 
 HELP_17 = """
   ANY ONE WANT TO BROADCAST THAN CONTECT [𝚴 𝐎 𝐁 𝚰 𝐓 𝚲](https://t.me/ll_NOBITA_DEFAULTERS_ll) AND BUY BROADCAST.
