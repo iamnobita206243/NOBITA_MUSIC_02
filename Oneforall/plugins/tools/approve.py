@@ -70,12 +70,12 @@ async def on_approval_action(client, callback_query: CallbackQuery):
     if action == "approve":
         try:
             await client.approve_chat_join_request(chat_id, user_id)
-            await callback_query.edit_message_text("✅ User has been approved.")
+            await callback_query.edit_message_text("✅ 𝐔sᴇʀ 𝐇ᴀs 𝐁ᴇᴇɴ 𝐀ᴘᴘʀᴏᴠᴇᴅ.")
         except Exception as e:
-            await callback_query.edit_message_text(f"Failed to approve: {e}")
+            await callback_query.edit_message_text(f"𝐅ᴀɪʟᴇᴅ 𝐓ᴏ 𝐀ᴘᴘʀᴏᴠᴇ: {e}")
     else:
         try:
             await client.decline_chat_join_request(chat_id, user_id)
-            await callback_query.edit_message_text("❌ User has been disapproved.")
+            await callback_query.edit_message_text("❌ 𝐔sᴇʀ 𝐇ᴀs 𝐁ᴇᴇɴ 𝐃ɪsᴀᴘᴘʀᴏᴠᴇᴅ.")
         except Exception as e:
-            await callback_query.edit_message_text(f"Failed to disapprove: {e}")
+            await callback_query.edit_message_text(f"𝐅ᴀɪʟᴇᴅ 𝐓ᴏ 𝐃ɪsᴀᴘᴘʀᴏᴠᴇ: {e}")
