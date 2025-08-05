@@ -12,24 +12,24 @@ async def start(client: Client, message: Message):
 
     await message.reply_video(
         video="https://files.catbox.moe/l8duqz.jpg",
-        caption=f"""❤️ HEY {message.from_user.mention}\n\n🤖 I AM {mention}\n\n✨ I AM FAST AND POWERFUL MUSIC PLAYER BOT WITH SOME AWESOME FEATURES.\n\n💫 IF YOU HAVE ANY QUESTIONS THEN JOIN OUR SUPPORT GROUP🤍 ...
+        caption=f"""❤️ ʜᴇʏ {message.from_user.mention}\n\n🤖 ɪ ᴀᴍ {mention}\n\n✨ ɪ ᴀᴍ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ғᴇᴀᴛᴜʀᴇs.\n\n💫 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴀɴ ᴊᴏɪɴ ᴏᴜʀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ ᴀɴᴅ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🤍 ...
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="☆ OWNER ☆", url="https://t.me/ll_NOBITA_DEFAULTERS_ll"
+                        text="☆ 𝐎ᴡɴᴇʀ ☆", url="https://t.me/ll_NOBITA_DEFAULTERS_ll"
                     ),
                     InlineKeyboardButton(
-                        text="☆ SUPPORT ☆", url="https://t.me/+WLTHgUavkYVmNtg9"
+                        text="☆ 𝐒ᴜᴘᴘᴏʀᴛ ☆", url="https://t.me/+WLTHgUavkYVmNtg9"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        text="☆ UPDATE ☆", url="https://t.me/NOBITA_SUPPORT"
+                        text="☆ 𝐔ᴘᴅᴀᴛᴇ ☆", url="https://t.me/NOBITA_SUPPORT"
                     ),
                     InlineKeyboardButton(
-                        text="★ CLOSE ★", callback_data="close"
+                        text="★ 𝐂ʟᴏsᴇ ★", callback_data="close"
                     ),
                 ]
             ]
