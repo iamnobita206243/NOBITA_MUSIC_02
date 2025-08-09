@@ -11,9 +11,6 @@ load_dotenv()
 API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
-YOUR_API_URL = getenv("YOUR_API_URL", "http://46.38.237.240:8000")
-YOUR_API_KEY = getenv("YOUR_API_KEY", "40385376567b497f9dda4a2482c57187")
-
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN", None)
 
