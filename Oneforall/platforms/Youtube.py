@@ -12,11 +12,6 @@ from youtubesearchpython.__future__ import VideosSearch
 from Oneforall.utils.database import is_on_off
 from Oneforall.utils.formatters import time_to_seconds
 
-# ============== CONFIGURE YOUR API ==============
-YOUR_API_URL = "http://46.38.237.240:8000"
-YOUR_API_KEY = "strangerapi2d6397630"            # <--- Change me!
-# ================================================
-
 
 def cookies():
     """
