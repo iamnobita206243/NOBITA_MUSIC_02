@@ -9,8 +9,9 @@ import httpx
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from youtubesearchpython.__future__ import VideosSearch
-from Clonify.utils.database import is_on_off
-from Clonify.utils.formatters import time_to_seconds
+from Oneforall.utils.database import is_on_off
+from Oneforall.utils.formatters import time_to_seconds
+from config import YOUR_API_URL , YOUR_API_KEY
 
 # ============== CONFIGURE YOUR API ==============
 YOUR_API_URL = "http://46.38.237.240:8000"
