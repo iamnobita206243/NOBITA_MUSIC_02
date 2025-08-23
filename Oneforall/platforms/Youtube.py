@@ -14,7 +14,7 @@ from Oneforall.utils.formatters import time_to_seconds
 
 # ============== CONFIGURE YOUR API ==============
 YOUR_API_URL = "http://46.38.237.240:8000"
-YOUR_API_KEY = "strangerapic6503c09a"            # <--- Change me!
+YOUR_API_KEY = "strangerapie4bf77a0f"            # <--- Change me!
 # ================================================
 
 async def get_file_from_api(video_id, audio=True):
