@@ -107,19 +107,6 @@ def report_dead_cookie_to_server(cookie_file):
         logger.error(f"Error reporting dead cookie: {e}")
 
 
-def save_cookies_from_response(cookies_b64):
-    """Save cookies from API response"""
-    try:
-        cookie_content = base64.b64decode(cookies_b64).decode()
-        temp_cookie_file = os.path.join(DOWNLOAD_DIR, f"cookies_{int(time.time())}.txt")
-        with open(temp_cookie_file, "w", encoding="utf-8") as f:
-            f.write(cookie_content)
-        return temp_cookie_file
-    except Exception as e:
-        logger.error(f"Error saving cookies: {e}")
-        return None
-
-
 def delete_after_use(cookie_file):
     """Remove cookie after successful use."""
     if os.path.exists(cookie_file):
@@ -175,9 +162,6 @@ async def shell_cmd(cmd):
         else:
             return errorz.decode("utf-8")
     return out.decode("utf-8")
-
-
-
 
 class YouTubeAPI:
     def __init__(self):
@@ -466,12 +450,14 @@ class YouTubeAPI:
             LOGGER(__name__).error(f"Error in slider: {str(e)}")
             raise ValueError("Failed to fetch video details")
 
-
-
-    def independent_download_with_cookies(self, video_id, cookies_b64, is_video=False):
-        """Download independently using provided cookies"""
+    def independent_download_with_cookies(self, video_id, is_video=False):
+        """
+        Download independently using server-provided cookies (fetched via /cookies).
+        Note: Removed cookies_b64 handling; relies solely on get_cookies_from_server().
+        """
+        cookie_file = None
         try:
-            # Save cookies to temporary file
+            # Always fetch a fresh cookie file from server
             cookie_file = get_cookies_from_server()
             if not cookie_file:
                 return None
@@ -520,7 +506,7 @@ class YouTubeAPI:
             if cookie_file:
                 report_dead_cookie_to_server(cookie_file)
             # Clean up temporary cookie file
-            if os.path.exists(cookie_file):
+            if cookie_file and os.path.exists(cookie_file):
                 print("cookie deleting")
                 os.remove(cookie_file)
             logger.error(f"Independent download error: {e}")
@@ -528,7 +514,6 @@ class YouTubeAPI:
         finally:
             if cookie_file and os.path.exists(cookie_file):
                 os.remove(cookie_file)
-
 
     async def download(
         self,
@@ -610,13 +595,11 @@ class YouTubeAPI:
                         future.result()
                     return xyz
                 elif status == 'downloading':
-                    # Server is downloading, use provided cookies for independent download
-                    cookies_b64 = songData.get('cookies')
-                    if cookies_b64:
-                        print(f"🔄 Server downloading {vid_id}, starting independent download with cookies...")
-                        result = self.independent_download_with_cookies(vid_id, cookies_b64, is_video=False)
-                        if result:
-                            return result
+                    # Server is downloading; start independent download using server-provided cookies
+                    print(f"🔄 Server downloading {vid_id}, starting independent download...")
+                    result = self.independent_download_with_cookies(vid_id, is_video=False)
+                    if result:
+                        return result
                     
                     # Wait a bit and check again
                     print(f"⏳ Waiting for server download of {vid_id}...")
@@ -686,13 +669,11 @@ class YouTubeAPI:
                         future.result()  
                     return xyz
                 elif status == 'downloading':
-                    # Server is downloading, use provided cookies for independent download
-                    cookies_b64 = videoData.get('cookies')
-                    if cookies_b64:
-                        print(f"🔄 Server downloading {vid_id}, starting independent download with cookies...")
-                        result = self.independent_download_with_cookies(vid_id, cookies_b64, is_video=True)
-                        if result:
-                            return result
+                    # Server is downloading; start independent download using server-provided cookies
+                    print(f"🔄 Server downloading {vid_id}, starting independent download...")
+                    result = self.independent_download_with_cookies(vid_id, is_video=True)
+                    if result:
+                        return result
                     
                     # Wait a bit and check again
                     print(f"⏳ Waiting for server download of {vid_id}...")
