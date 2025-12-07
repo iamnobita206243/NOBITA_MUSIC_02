@@ -30,6 +30,7 @@ httpx==0.25.2
 lyricsgenius
 spotipy
 SafoneAPI
+py-yt-search
 youtube_search
 youtube-search-python
 googlesearch-python
