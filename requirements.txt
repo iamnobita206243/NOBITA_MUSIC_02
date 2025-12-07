@@ -28,6 +28,7 @@ lexica-api
 lyricsgenius
 motor
 MukeshAPI
+ntgcalls==1.1.2
 numpy
 openai
 opencv-python
