@@ -18,6 +18,7 @@ Faker
 gitpython
 gpytranslate
 gtts
+googlesearch-python
 hachoir
 heroku3
 httpx
