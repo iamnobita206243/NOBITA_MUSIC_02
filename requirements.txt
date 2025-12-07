@@ -1,9 +1,10 @@
 telethon==1.33.1
 aiofiles
+asyncio
 apscheduler
-aiohttp==3.9.3
-asyncio==3.4.3
+aiohttp==3.9.1
 gTTS
+httpx
 dnspython==2.3.0
 hachoir
 heroku3
@@ -14,7 +15,7 @@ wget
 qrcode
 future==0.18.3
 search_engine_parser
-speedtest
+speedtest-cli
 py-tgcalls==1.2.9
 MukeshAPI
 ntgcalls==1.1.2
@@ -26,7 +27,7 @@ tgcrypto
 telegraph==2.2.0
 yt-dlp
 lexica-api==1.4.7
-httpx==0.25.2
+httpx==0.24.1
 lyricsgenius
 spotipy
 SafoneAPI
@@ -35,8 +36,6 @@ youtube_search
 youtube-search-python
 googlesearch-python
 unidecode
-#git+https://github.com/joetats/youtube_search@master
-#git+https://github.com/alexmercerind/youtube-search-python@main
-https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
-git+https://github.com/AsmSafone/SafoneAPI
 bing_image_downloader
+git+https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.23.zip
+git+https://github.com/AsmSafone/SafoneAPI
